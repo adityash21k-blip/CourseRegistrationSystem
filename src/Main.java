@@ -1,33 +1,33 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main{
 
     private static Scanner scanner = new Scanner(System.in);
 
     private static StudentManager studentManager = new StudentManager();
     private static CourseManager courseManager = new CourseManager();
     private static RegistrationManager registrationManager =
-            new RegistrationManager(studentManager, courseManager);
+          new RegistrationManager(studentManager, courseManager);
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         FileManager.initializeFiles();
 
         loadData();
 
-        System.out.println("=========================================");
+        System.out.println("=======================================");
         System.out.println("       COURSE REGISTRATION SYSTEM");
-        System.out.println("=========================================");
+        System.out.println("=======================================");
 
         boolean running = true;
 
-        while (running) {
+        while (running){
 
             displayMainMenu();
 
             int choice = readInteger("Enter your choice: ");
 
-            switch (choice) {
+            switch (choice){
 
                 case 1:
                     studentManagement();
