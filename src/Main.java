@@ -65,28 +65,28 @@ public class Main{
 
     // ================= MAIN MENU =================
 
-    private static void displayMainMenu() {
+    private static void displayMainMenu(){
 
-        System.out.println("\n=========================================");
+        System.out.println("\n=======================================");
         System.out.println("              MAIN MENU");
-        System.out.println("=========================================");
+        System.out.println("=======================================");
         System.out.println("1. Student Management");
         System.out.println("2. Course Management");
         System.out.println("3. Course Registration");
         System.out.println("4. Registration Report");
         System.out.println("5. Exit");
-        System.out.println("=========================================");
+        System.out.println("=======================================");
     }
 
     // ================= STUDENT MANAGEMENT =================
 
-    private static void studentManagement() {
+    private static void studentManagement(){
 
         boolean back = false;
 
-        while (!back) {
+        while (!back){
 
-            System.out.println("\n========== STUDENT MANAGEMENT ==========");
+            System.out.println("\n========= STUDENT MANAGEMENT =========");
             System.out.println("1. Add Student");
             System.out.println("2. View All Students");
             System.out.println("3. Search Student");
@@ -95,7 +95,7 @@ public class Main{
 
             int choice = readInteger("Enter your choice: ");
 
-            switch (choice) {
+            switch (choice){
 
                 case 1:
                     addStudent();
@@ -125,11 +125,11 @@ public class Main{
 
     private static void addStudent() {
 
-        System.out.println("\n========== ADD STUDENT ==========");
+        System.out.println("\n========= ADD STUDENT =========");
 
         String id = readNonEmpty("Enter Student ID: ");
 
-        if (studentManager.findStudent(id) != null) {
+        if (studentManager.findStudent(id) != null){
             System.out.println("Student ID already exists.");
             return;
         }
@@ -138,11 +138,11 @@ public class Main{
 
         String email;
 
-        while (true) {
+        while (true){
 
             email = readNonEmpty("Enter Email: ");
 
-            if (InputValidator.isValidEmail(email)) {
+            if (InputValidator.isValidEmail(email)){
                 break;
             }
 
@@ -154,9 +154,9 @@ public class Main{
         String program = readNonEmpty("Enter Program: ");
 
         Student student =
-                new Student(id, name, email, program);
+                new Student(id, name, email,program);
 
-        if (studentManager.addStudent(student)) {
+        if (studentManager.addStudent(student)){
 
             FileManager.saveStudents(
                     studentManager.getStudents()
@@ -174,9 +174,9 @@ public class Main{
         }
     }
 
-    private static void searchStudent() {
+    private static void searchStudent(){
 
-        System.out.println("\n========== SEARCH STUDENT ==========");
+        System.out.println("\n========= SEARCH STUDENT =========");
 
         String id = readNonEmpty("Enter Student ID: ");
 
@@ -190,11 +190,11 @@ public class Main{
         }
     }
 
-    private static void removeStudent() {
+    private static void removeStudent(){
 
-        System.out.println("\n========== REMOVE STUDENT ==========");
+        System.out.println("\n========= REMOVE STUDENT =========");
 
-        String id = readNonEmpty("Enter Student ID: ");
+        String id = readNonEmpty("Enter Student ID:");
 
         if (studentManager.removeStudent(id)) {
 
@@ -214,7 +214,7 @@ public class Main{
         }
     }
 
-    // ================= COURSE MANAGEMENT =================
+    // ============= COURSE MANAGEMENT ==============
 
     private static void courseManagement() {
 
@@ -222,16 +222,16 @@ public class Main{
 
         while (!back) {
 
-            System.out.println("\n========== COURSE MANAGEMENT ==========");
+            System.out.println("\n========= COURSE MANAGEMENT =========");
             System.out.println("1. Add Course");
             System.out.println("2. View All Courses");
             System.out.println("3. Search Course");
             System.out.println("4. Remove Course");
             System.out.println("5. Back");
 
-            int choice = readInteger("Enter your choice: ");
+            int choice = readInteger("Enter your choice:");
 
-            switch (choice) {
+            switch (choice){
 
                 case 1:
                     addCourse();
@@ -261,9 +261,9 @@ public class Main{
 
     private static void addCourse() {
 
-        System.out.println("\n========== ADD COURSE ==========");
+        System.out.println("\n========= ADD COURSE =========");
 
-        String id = readNonEmpty("Enter Course ID: ");
+        String id = readNonEmpty("Enter Course ID:");
 
         if (courseManager.findCourse(id) != null) {
             System.out.println("Course ID already exists.");
@@ -275,7 +275,7 @@ public class Main{
 
         int credits;
 
-        while (true) {
+        while (true){
 
             credits = readInteger("Enter Credits: ");
 
@@ -290,7 +290,7 @@ public class Main{
 
         int capacity;
 
-        while (true) {
+        while (true){
 
             capacity =
                     readInteger("Enter Course Capacity: ");
@@ -305,7 +305,7 @@ public class Main{
         }
 
         Course course =
-                new Course(id, name, credits, capacity);
+                new Course(id,name,credits,capacity);
 
         if (courseManager.addCourse(course)) {
 
@@ -327,13 +327,13 @@ public class Main{
 
     private static void searchCourse() {
 
-        System.out.println("\n========== SEARCH COURSE ==========");
+        System.out.println("\n========= SEARCH COURSE =========");
 
-        String id = readNonEmpty("Enter Course ID: ");
+        String id = readNonEmpty("Enter Course ID:");
 
         Course course = courseManager.findCourse(id);
 
-        if (course != null) {
+        if (course != null){
 
             System.out.println("\nCourse Found:");
             System.out.println(course);
@@ -346,7 +346,7 @@ public class Main{
 
     private static void removeCourse() {
 
-        System.out.println("\n========== REMOVE COURSE ==========");
+        System.out.println("\n========= REMOVE COURSE =========");
 
         String id = readNonEmpty("Enter Course ID: ");
 
@@ -368,7 +368,7 @@ public class Main{
         }
     }
 
-    // ================= REGISTRATION MANAGEMENT =================
+    // ================ REGISTRATION MANAGEMENT ================
 
     private static void registrationManagement() {
 
@@ -377,7 +377,7 @@ public class Main{
         while (!back) {
 
             System.out.println(
-                    "\n======= REGISTRATION MANAGEMENT ======="
+                    "\n====== REGISTRATION MANAGEMENT ======"
             );
 
             System.out.println("1. Register Student for Course");
@@ -498,7 +498,7 @@ public class Main{
     private static void checkCourseAvailability() {
 
         System.out.println(
-                "\n========== COURSE AVAILABILITY =========="
+                "\n======= COURSE AVAILABILITY ======="
         );
 
         String courseId =
@@ -509,7 +509,7 @@ public class Main{
         );
     }
 
-    // ================= DATA MANAGEMENT =================
+    // ============== DATA MANAGEMENT ==============
 
     private static void loadData() {
 
@@ -550,7 +550,7 @@ public class Main{
             }
         }
 
-        // Add sample data if files are empty
+        
         if (studentManager.getStudents().isEmpty()) {
             studentManager.addSampleStudents();
             FileManager.saveStudents(
@@ -581,7 +581,7 @@ public class Main{
         );
     }
 
-    // ================= INPUT METHODS =================
+    // ============= INPUT METHODS =============
 
     private static String readNonEmpty(String message) {
 
