@@ -1,0 +1,3 @@
+S101,Aditya Sharma,aditya@example.com,B.Tech CSE
+S102,Rahul Verma,rahul@example.com,B.Tech CSE
+S103,Priya Singh,priya@example.com,B.Tech AIML
