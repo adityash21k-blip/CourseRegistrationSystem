@@ -1,4 +1,4 @@
-# Course Registration System
+Course Registration System
 
 1. Project Title
 
@@ -85,19 +85,19 @@ The main objectives of this project are:
 CourseRegistrationSystem
 │
 ├── src
-│   ├── Main.java
+    ├── Main.java
 │   ├── Student.java
-│   ├── Course.java
+    ├── Course.java
 │   ├── Registration.java
 │   ├── StudentManager.java
-│   ├── CourseManager.java
+    ├── CourseManager.java
 │   ├── RegistrationManager.java
 │   ├── FileManager.java
 │   └── InputValidator.java
 │
 ├── data
 │   ├── students.txt
-│   ├── courses.txt
+    ├── courses.txt
 │   └── registrations.txt
 │
 ├── README.md
