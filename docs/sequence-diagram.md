@@ -76,8 +76,8 @@ Student/User
 |     .txt       |
 +----------------+
      |
-     | Success Message
-     v
+ Success Message
+     
 +----------------+
 |    Main.java   |
 +----------------+
