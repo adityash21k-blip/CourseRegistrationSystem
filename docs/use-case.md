@@ -1,13 +1,13 @@
 # Use Case Diagram
 
-## Actors
+ Actors
 
 - Student
 - Administrator
 
-## Use Cases
+ Use Cases
 
-```text
+
                          COURSE REGISTRATION SYSTEM
                     +------------------------------------+
                     |                                    |
@@ -16,11 +16,11 @@
 Student ------------|   Search Student                   |
                     |   Register Course                  |
                     |   Drop Course                      |
-                    |   View Registered Courses           |
-                    |   Check Course Availability         |
+                    |   View Registered Courses          |
+                    |   Check Course Availability        |
                     |                                    |
                     |   Add Course                       |
-Administrator -------|   View Courses                     |
+Administrator ------|   View Courses                    |
                     |   Search Course                    |
                     |   Remove Course                    |
                     |   View Registration Report         |
